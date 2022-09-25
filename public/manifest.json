@@ -1,6 +1,6 @@
 {
-  "name": "PWA App",
-  "short_name": "App",
+  "name": "Parking Coloc",
+  "short_name": "Parking Coloc",
   "icons": [
     {
       "src": "/icons/favicon-16x16.png",
