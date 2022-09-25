@@ -27,47 +27,45 @@ const Home: NextPage = () => {
         <meta name="description" content="Parking calendar" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-blue-200 w-screen h-screen p-10">
-        <div className="bg-blue-500 text-white border-white border-8 sm:border-[14px] md:border-[20px] rounded-xl aspect-[2/3] max-w-full max-h-full m-auto">
-          <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
-            <text
+      <div className="bg-blue-500 text-white border-white border-8 transition-all sm:border-[20px] rounded-3xl aspect-[2/3] m-auto inset-0 fixed max-h-[75vh] max-w-[75vw]">
+        <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+          <text
+          x={100}
+          y={150}
+          fontSize={250}
+          textAnchor="middle"
+          dominantBaseline="middle"
+          style={{
+            fill: 'white',
+            fontWeight: 'bolder',
+          }}>
+            P
+          </text>
+          <text
             x={100}
-            y={150}
-            fontSize={250}
+            y={275}
+            fontSize={35}
             textAnchor="middle"
             dominantBaseline="middle"
             style={{
               fill: 'white',
               fontWeight: 'bolder',
             }}>
-              P
-            </text>
-            <text
-              x={100}
-              y={275}
-              fontSize={35}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              style={{
-                fill: 'white',
-                fontWeight: 'bolder',
-              }}>
-              {persons[currentIndex % persons.length]}
-            </text>
-            <text
-              x={100}
-              y={295}
-              fontSize={5}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              style={{
-                fill: 'white',
-                fontWeight: 'bolder',
-              }}>
-              (après: {persons[nextIndex % persons.length]})
-            </text>
-          </svg>
-        </div>
+            {persons[currentIndex % persons.length]}
+          </text>
+          <text
+            x={100}
+            y={295}
+            fontSize={5}
+            textAnchor="middle"
+            dominantBaseline="middle"
+            style={{
+              fill: 'white',
+              fontWeight: 'bolder',
+            }}>
+            (après: {persons[nextIndex % persons.length]})
+          </text>
+        </svg>
       </div>
     </>
   );
