@@ -16,10 +16,10 @@ function getWeeksDiff(startDate:Date, endDate: Date) {
 }
 
 const Home: NextPage = () => {
-  const persons = ['Noémie', 'Thibaut', 'Kim', 'Alissia'];
+  const persons = ['Noémie', 'Kim', 'Thibaut', 'Alissia'];
   const today = new Date(Date.now());
   const currentIndex = getWeeksDiff(getMondayOfCurrentWeek(InitalDate), getMondayOfCurrentWeek(today));
-  const nextIndex = currentIndex + 1
+  const nextIndex = currentIndex + 1;
   return (
     <>
       <Head>
