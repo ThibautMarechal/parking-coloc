@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Snowfall from 'react-snowfall'
 
 const InitalDate = new Date('2022-08-29');
 
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="bg-blue-500 text-white border-white border-8 transition-all sm:border-[20px] rounded-3xl aspect-[2/3] m-auto inset-0 fixed max-h-[75vh] max-w-[75vw]">
+        <Snowfall />
         <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
           <text
           x={100}
