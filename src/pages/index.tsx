@@ -41,7 +41,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {isNewYear(today) &&
-        (<Fireworks style={{
+        (<Fireworks
+          options={{
+            rocketsPoint: {
+              min: 0,
+              max: 100
+            }
+          }}
+          style={{
             top: 0,
             left: 0,
             width: '100%',
