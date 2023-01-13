@@ -18,6 +18,12 @@ function isNewYear(date: Date) {
   return month === 11 && day === 31 || month === 0 && day === 1
 }
 
+function isBelgiumDay(date: Date) {
+  const month =  date.getMonth()
+  const day =  date.getDate()
+  return month === 6 && day === 21
+}
+
 function getSpecialDatePerson(date: Date){
   const month = date.getMonth();
   const day = date.getDate();
@@ -61,7 +67,7 @@ function getWeeksDiff(startDate:Date, endDate: Date) {
 const Home: NextPage = () => {
   const persons = ['Noémie', 'Thibaut', 'Kim', 'Alissia'];
   const today = new Date(Date.now());
-  // const today = new Date(2022, 10, 1);
+  // const today = new Date(2022, 0, 1);
   const currentIndex = getWeeksDiff(getMondayOfCurrentWeek(InitalDate), getMondayOfCurrentWeek(today));
   const nextIndex = currentIndex + 1;
 
@@ -72,7 +78,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Parking calendar" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {isNewYear(today) &&
+      {isNewYear(today) || isBelgiumDay(today) &&
         (<Fireworks
           options={{
             rocketsPoint: {
